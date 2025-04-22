@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niru ML - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Inter font globally */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            /* Black background */
+            color: #FFFFFF;
+            /* White text */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            /* Ensure footer stays at bottom */
+        }
+
+        /* Simple separator line style */
+        .separator {
+            width: 50px;
+            height: 1px;
+            background-color: #FFFFFF;
+            margin: 1rem auto;
+            /* Center the separator */
+        }
+
+        /* Footer styling */
+        footer {
+            margin-top: auto;
+            /* Push footer to the bottom */
+        }
+
+        /* Basic link styling */
+        a {
+            color: #A0A0A0;
+            /* Lighter gray for links */
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #FFFFFF;
+            /* White on hover */
+        }
+
+        /* Style for social icons (using text placeholders for now) */
+        .social-icon {
+            display: inline-block;
+            padding: 0.5rem;
+            border: 1px solid #A0A0A0;
+            border-radius: 0.25rem;
+            /* Slightly rounded corners */
+            margin: 0 0.5rem;
+        }
+
+        .social-icon:hover {
+            border-color: #FFFFFF;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col items-center justify-between p-8">
+
+    <header class="w-full max-w-4xl text-center mb-16 mt-8">
+        <div class="inline-block border border-white p-4 mb-4">
+            <span class="text-xl font-bold">NIRU ML</span>
+        </div>
+        <nav class="mt-4">
+            <a href="index.html" class="text-white font-bold mx-2">Home</a>
+            <a href="about.html" class="text-gray-400 hover:text-white mx-2">About</a>
+        </nav>
+    </header>
+
+    <main class="w-full max-w-2xl text-center flex-grow flex flex-col items-center justify-center px-4">
+        <div class="separator"></div>
+        <h1 class="text-3xl md:text-4xl font-bold leading-tight mb-4">
+            PROVIDING COST-EFFICIENT & <br> SOTA AI SOLUTIONS
+        </h1>
+        <div class="separator"></div>
+        <p class="text-base md:text-lg text-gray-300 leading-relaxed">
+            Named after the Manchu word for 'arrow', or 'to aim', Niru ML precisely targets optimal model architectures
+            while minimizing computational costs. Niru units were known for their mobility and speed, making them
+            effective for reconnaissance, flanking maneuvers, and quick strikes against enemy positions. They played a
+            critical role in the Qing military's adaptability and responsiveness on the battlefield.
+        </p>
+    </main>
+
+    <footer class="w-full max-w-4xl text-center text-xs text-gray-400 mt-16 mb-8">
+        <div class="mb-4">
+            <a href="mailto:placeholder@niru.ml" class="hover:text-white mx-2">Email: placeholder@niru.ml</a> |
+            <a href="https://linkedin.com/in/placeholder-founder" target="_blank" rel="noopener noreferrer"
+                class="hover:text-white mx-2">Founder Linkedin</a> |
+            <a href="https://linkedin.com/company/placeholder-niru" target="_blank" rel="noopener noreferrer"
+                class="hover:text-white mx-2">Company Linkedin</a>
+        </div>
+        <div>
+            <a href="https://linkedin.com/company/placeholder-niru" target="_blank" rel="noopener noreferrer"
+                class="social-icon">in</a>
+        </div>
+        <p class="mt-4">&copy; 2025 Niru ML. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

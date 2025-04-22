@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niru ML - About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Inter font globally */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            /* Black background */
+            color: #FFFFFF;
+            /* White text */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            /* Ensure footer stays at bottom */
+        }
+
+        /* Simple separator line style */
+        .separator {
+            width: 50px;
+            height: 1px;
+            background-color: #FFFFFF;
+            margin: 1rem auto;
+            /* Center the separator */
+        }
+
+        /* Footer styling */
+        footer {
+            margin-top: auto;
+            /* Push footer to the bottom */
+        }
+
+        /* Basic link styling */
+        a {
+            color: #A0A0A0;
+            /* Lighter gray for links */
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #FFFFFF;
+            /* White on hover */
+        }
+
+        /* Style for social icons (using text placeholders for now) */
+        .social-icon {
+            display: inline-block;
+            padding: 0.5rem;
+            border: 1px solid #A0A0A0;
+            border-radius: 0.25rem;
+            /* Slightly rounded corners */
+            margin: 0 0.5rem;
+        }
+
+        .social-icon:hover {
+            border-color: #FFFFFF;
+        }
+
+        /* Section spacing */
+        section {
+            margin-bottom: 3rem;
+            /* Add space between sections */
+        }
+
+        /* List styling */
+        ul {
+            list-style: disc;
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col items-center p-8">
+
+    <header class="w-full max-w-4xl text-center mb-16 mt-8">
+        <div class="inline-block border border-white p-4 mb-4">
+            <span class="text-xl font-bold">NIRU ML</span>
+        </div>
+        <nav class="mt-4">
+            <a href="index.html" class="text-gray-400 hover:text-white mx-2">Home</a>
+            <a href="about.html" class="text-white font-bold mx-2">About</a>
+        </nav>
+    </header>
+
+    <main class="w-full max-w-3xl text-center flex-grow px-4">
+
+        <section id="about-us">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">ABOUT US</h1>
+            <div class="separator"></div>
+            <p class="text-base md:text-lg text-gray-300 leading-relaxed mb-6">
+                Niru ML is pioneering cutting-edge research and solutions company built on the foundation of our
+                revolutionary
+                Artificial Machine Learning Operation (AMLO) framework. AMLO facilitates the development of highly
+                efficient and
+                cost-effective modeling systems that enable rapid experimentation and performance optimization. Our
+                framework represents a
+                fundamental shift in how ML systems are designed, tested, and deployed, with a focus on automation,
+                rigorous validation, and
+                architectural flexibility.
+            </p>
+        </section>
+
+        <section id="about-founder">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">ABOUT THE FOUNDER</h2>
+            <div class="separator"></div>
+            <p class="text-base md:text-lg text-gray-300 leading-relaxed mb-6">
+                The Founder brings deep expertise in Systems and Experimental AI. [Add more details about the founder's
+                background, experience, and motivation here]. This experience forms the foundation of Niru ML's
+                innovative approach to machine learning operations.
+            </p>
+        </section>
+
+        <section id="vision">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">VISION</h2>
+            <div class="separator"></div>
+            <p class="text-base md:text-lg text-gray-300 leading-relaxed mb-4">
+                To create an ecosystem where AI-powered solutions are seamlessly integrated, continuously improved
+                through intelligent automation and robust evaluation frameworks.
+            </p>
+            <p class="text-base md:text-lg text-gray-300 leading-relaxed mb-4 text-left mx-auto max-w-xl">
+                Our roadmap includes:
+            </p>
+            <ul class="text-base md:text-lg text-gray-300 leading-relaxed text-left mx-auto max-w-xl">
+                <li>Pioneering novel AMLO components enhancing model lifecycle management.</li>
+                <li>Developing adaptive learning systems that optimize resource utilization.</li>
+                <li>Expanding our framework to support diverse AI domains and problem types.</li>
+                <li>Fostering a community around efficient and reliable AI system design.</li>
+            </ul>
+        </section>
+
+        <section id="mission">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">OUR MISSION</h2>
+            <div class="separator"></div>
+            <p class="text-base md:text-lg text-gray-300 leading-relaxed mb-6">
+                Niru ML is dedicated to advancing the field of Artificial Intelligence through rigorous, automated, and
+                cost-effective Machine Learning Operations.
+            </p>
+            <div class="my-8 flex justify-center">
+                <img src="bow_arrow.jpg" alt="Manchu Bow and Arrow"
+                    class="max-w-xs md:max-w-sm rounded border border-gray-600"
+                    onerror="this.style.display='none'; console.error('Failed to load image: bow_arrow.jpg')">
+            </div>
+            <p class="text-base md:text-lg text-gray-300 leading-relaxed mb-4 text-left mx-auto max-w-xl">
+                Key focus areas:
+            </p>
+            <ul class="text-base md:text-lg text-gray-300 leading-relaxed text-left mx-auto max-w-xl">
+                <li>**Process Automation/Optimization:** Streamline ML workflows from data ingestion to deployment
+                    monitoring.</li>
+                <li>**Dynamic Architectural Optimization:** Intelligently select and tune model architectures for
+                    specific tasks and constraints.</li>
+                <li>**Systematic Risk Management:** Implement robust validation and testing protocols to ensure
+                    reliability and fairness.</li>
+                <li>**Resource-Efficient Training:** Develop techniques to minimize computational cost and energy
+                    consumption during model training.</li>
+                <li>**Explainable AI Integration:** Build tools and methods to enhance transparency and interpretability
+                    of complex models.</li>
+            </ul>
+            <p class="text-base md:text-lg text-gray-300 leading-relaxed mt-6">
+                We strive to empower organizations to build and deploy sophisticated AI systems responsibly and
+                efficiently, driving innovation while maintaining control over complexity and cost.
+            </p>
+            <p class="text-sm text-gray-500 mt-4">
+                Brendan [Last Name Placeholder] <br>
+                Founder, Niru ML
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="w-full max-w-4xl text-center text-xs text-gray-400 mt-16 mb-8">
+        <div class="mb-4">
+            <a href="mailto:placeholder@niru.ml" class="hover:text-white mx-2">Email: placeholder@niru.ml</a> |
+            <a href="https://linkedin.com/in/placeholder-founder" target="_blank" rel="noopener noreferrer"
+                class="hover:text-white mx-2">Founder Linkedin</a> |
+            <a href="https://linkedin.com/company/placeholder-niru" target="_blank" rel="noopener noreferrer"
+                class="hover:text-white mx-2">Company Linkedin</a>
+        </div>
+        <div>
+            <a href="https://linkedin.com/company/placeholder-niru" target="_blank" rel="noopener noreferrer"
+                class="social-icon">in</a>
+        </div>
+        <p class="mt-4">&copy; 2025 Niru ML. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
