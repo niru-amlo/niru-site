@@ -8,56 +8,61 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Work+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
     <style>
-        /* Apply Inter font globally */
+        /* Apply Work Sans font to the body (default) */
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Work Sans', sans-serif;
             background-color: #000000;
-            /* Black background */
             color: #FFFFFF;
-            /* White text */
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            /* Ensure footer stays at bottom */
+        }
+
+        /* Apply EB Garamond to headings */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'EB Garamond', serif;
         }
 
         /* Simple separator line style */
         .separator {
-            width: 50px;
+            width: 60px;
             height: 1px;
             background-color: #FFFFFF;
-            margin: 1rem auto;
-            /* Center the separator */
+            margin: 1.5rem auto;
         }
 
         /* Footer styling */
         footer {
             margin-top: auto;
-            /* Push footer to the bottom */
         }
 
         /* Basic link styling */
         a {
             color: #A0A0A0;
-            /* Lighter gray for links */
             transition: color 0.3s ease;
         }
 
         a:hover {
             color: #FFFFFF;
-            /* White on hover */
         }
 
-        /* Style for social icons (using text placeholders for now) */
+        /* Style for social icons */
         .social-icon {
             display: inline-block;
             padding: 0.5rem;
             border: 1px solid #A0A0A0;
             border-radius: 0.25rem;
-            /* Slightly rounded corners */
             margin: 0 0.5rem;
+            font-family: 'Work Sans', sans-serif;
         }
 
         .social-icon:hover {
@@ -67,18 +72,66 @@
         /* Section spacing */
         section {
             margin-bottom: 3rem;
-            /* Add space between sections */
         }
 
-        /* List styling */
-        ul {
-            list-style: disc;
-            margin-left: 1.5rem;
+        /* List styling - Remove default bullets and padding */
+        main ul {
+            /* Target lists within main */
+            list-style: none;
+            /* Remove default bullets */
+            padding-left: 0;
+            /* Remove default padding */
             margin-top: 0.5rem;
         }
 
-        li {
+        /* Style for list items - Add padding for manual bullet */
+        main ul li {
             margin-bottom: 0.5rem;
+            line-height: 1.75;
+            padding-left: 1.5em;
+            /* Add space for the manual bullet */
+            position: relative;
+            /* Needed for absolute positioning of ::before */
+        }
+
+        /* Create manual bullet using ::before */
+        main ul li::before {
+            content: '•';
+            /* The bullet character */
+            color: #FFFFFF;
+            /* Bullet color */
+            font-weight: bold;
+            /* Make bullet bolder if desired */
+            display: inline-block;
+            position: absolute;
+            /* Position relative to the li */
+            left: 0.5em;
+            /* Position bullet slightly indented */
+            /* Adjust 'left' value as needed for desired indentation */
+        }
+
+        /* Remove ::marker rule as we are using ::before */
+        /*
+        main ul li::marker {
+             color: #FFFFFF;
+        }
+        */
+
+        /* Logo styling */
+        .logo-img {
+            max-height: 60px;
+            width: auto;
+        }
+
+        /* Line-height for body paragraphs */
+        main p {
+            line-height: 1.75;
+        }
+
+        /* Use strong tag for bold text within lists */
+        li strong {
+            font-weight: 700;
+            color: #FFFFFF;
         }
     </style>
 </head>
@@ -86,8 +139,9 @@
 <body class="flex flex-col items-center p-8">
 
     <header class="w-full max-w-4xl text-center mb-16 mt-8">
-        <div class="inline-block border border-white p-4 mb-4">
-            <span class="text-xl font-bold">NIRU ML</span>
+        <div class="inline-block mb-4">
+            <img src="NIRUML.png" alt="Niru ML Logo" class="logo-img"
+                onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'text-xl font-bold\'>NIRU ML</span>'; console.error('Failed to load image: NIRUML.png')">
         </div>
         <nav class="mt-4">
             <a href="index.html" class="text-gray-400 hover:text-white mx-2">Home</a>
@@ -100,80 +154,89 @@
         <section id="about-us">
             <h1 class="text-3xl md:text-4xl font-bold mb-4">ABOUT US</h1>
             <div class="separator"></div>
-            <p class="text-base md:text-lg text-gray-300 leading-relaxed mb-6">
-                Niru ML is pioneering cutting-edge research and solutions company built on the foundation of our
-                revolutionary
-                Artificial Machine Learning Operation (AMLO) framework. AMLO facilitates the development of highly
-                efficient and
-                cost-effective modeling systems that enable rapid experimentation and performance optimization. Our
-                framework represents a
-                fundamental shift in how ML systems are designed, tested, and deployed, with a focus on automation,
-                rigorous validation, and
-                architectural flexibility.
+            <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-6">
+                Niru ML is a pioneering artificial intelligence research and solutions company built on the foundation
+                of our revolutionary Automated Machine Learning Operations (AMLO) framework. We specialize in developing
+                compute-efficient, highly modular machine learning systems that enable rapid experimentation and
+                performance optimization. Our framework represents a fundamental shift in how ML systems are designed,
+                tested, and deployed, with a focus on automation, rigorous validation, and architectural flexibility.
             </p>
         </section>
 
         <section id="about-founder">
             <h2 class="text-2xl md:text-3xl font-bold mb-4">ABOUT THE FOUNDER</h2>
             <div class="separator"></div>
-            <p class="text-base md:text-lg text-gray-300 leading-relaxed mb-6">
-                The Founder brings deep expertise in Systems and Experimental AI. [Add more details about the founder's
-                background, experience, and motivation here]. This experience forms the foundation of Niru ML's
-                innovative approach to machine learning operations.
+            <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-6">
+                I'm Brendon Reperttang, an MIT Computer Science and Engineering (6-3) graduate, class of 2024. During my
+                time at MIT, I developed a passion for agentic ML, multi-agent systems, and AI automation frameworks,
+                working on several research projects that explored the boundaries of neural architecture search and
+                automated model development.
+
+                What drives me is the belief that a true breakthrough in AI won't come from simply scaling existing
+                architectures, but from a multi-faceted approach, systematically exploring the design space of models
+                through principled experimentation, as well as pushing the boundaries of our training and evaluation
+                techniques.
             </p>
         </section>
 
         <section id="vision">
             <h2 class="text-2xl md:text-3xl font-bold mb-4">VISION</h2>
             <div class="separator"></div>
-            <p class="text-base md:text-lg text-gray-300 leading-relaxed mb-4">
-                To create an ecosystem where AI-powered solutions are seamlessly integrated, continuously improved
-                through intelligent automation and robust evaluation frameworks.
+            <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-4">
+                Instead of time-consuming manual experimentation, ML practitioners will define high-level objectives and
+                constraints, allowing intelligent systems to explore the vast design space of possible solutions. This
+                approach will not only speed up research but also lead to the discovery of novel architectures that
+                human intuition might miss.
             </p>
-            <p class="text-base md:text-lg text-gray-300 leading-relaxed mb-4 text-left mx-auto max-w-xl">
+            <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-4 text-left mx-auto max-w-xl">
                 Our roadmap includes:
             </p>
-            <ul class="text-base md:text-lg text-gray-300 leading-relaxed text-left mx-auto max-w-xl">
-                <li>Pioneering novel AMLO components enhancing model lifecycle management.</li>
-                <li>Developing adaptive learning systems that optimize resource utilization.</li>
-                <li>Expanding our framework to support diverse AI domains and problem types.</li>
-                <li>Fostering a community around efficient and reliable AI system design.</li>
+            <ul class="text-sm md:text-base leading-relaxed text-left mx-auto max-w-xl">
+                <li>Expanding the AMLO component registry to cover the full spectrum of ML building blocks</li>
+                <li>Developing increasingly sophisticated model evaluation protocols that capture both performance and
+                    efficiency</li>
+                <li>Creating an AI-guided experimentation system that can reason about architecture design and suggest
+                    improvements</li>
+                <li>Building a collaborative platform where researchers can share components and architectures to
+                    further unlock new model and system designs</li>
             </ul>
         </section>
 
         <section id="mission">
             <h2 class="text-2xl md:text-3xl font-bold mb-4">OUR MISSION</h2>
             <div class="separator"></div>
-            <p class="text-base md:text-lg text-gray-300 leading-relaxed mb-6">
-                Niru ML is dedicated to advancing the field of Artificial Intelligence through rigorous, automated, and
-                cost-effective Machine Learning Operations.
+            <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-6">
+                Niru ML exists to revolutionize AI development and deployment across four key markets: enterprise
+                consultancy, specialized professional tools, consumer-facing agent services, and product integration.
             </p>
             <div class="my-8 flex justify-center">
-                <img src="bow_arrow.jpg" alt="Manchu Bow and Arrow"
+                <img src="bow.jpg" alt="Manchu Bow and Arrow"
                     class="max-w-xs md:max-w-sm rounded border border-gray-600"
-                    onerror="this.style.display='none'; console.error('Failed to load image: bow_arrow.jpg')">
+                    onerror="this.style.display='none'; console.error('Failed to load image: bow.jpg')">
             </div>
-            <p class="text-base md:text-lg text-gray-300 leading-relaxed mb-4 text-left mx-auto max-w-xl">
+            <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-4 text-left mx-auto max-w-xl">
                 Key focus areas:
             </p>
-            <ul class="text-base md:text-lg text-gray-300 leading-relaxed text-left mx-auto max-w-xl">
-                <li>**Process Automation/Optimization:** Streamline ML workflows from data ingestion to deployment
-                    monitoring.</li>
-                <li>**Dynamic Architectural Optimization:** Intelligently select and tune model architectures for
-                    specific tasks and constraints.</li>
-                <li>**Systematic Risk Management:** Implement robust validation and testing protocols to ensure
-                    reliability and fairness.</li>
-                <li>**Resource-Efficient Training:** Develop techniques to minimize computational cost and energy
-                    consumption during model training.</li>
-                <li>**Explainable AI Integration:** Build tools and methods to enhance transparency and interpretability
-                    of complex models.</li>
+            <ul class="text-sm md:text-base text-gray-300 leading-relaxed text-left mx-auto max-w-xl">
+                <li><strong>Pioneer Automated Innovation:</strong> We're building a comprehensive framework that reduces
+                    time from concept to implementation through our four-phase development approach: from modular base
+                    models to efficient agentic systems.</li>
+                <li><strong>Deliver Transformative Efficiency:</strong> We create scalable AI systems that achieve
+                    superior results with optimized computational resources through our robust pipeline and
+                    hyperparameter tuning capabilities.</li>
+                <li><strong>Establish New Standards for Rigor:</strong> We embed validation and verification at every
+                    level of the ML development lifecycle.</li>
+                <li><strong>Enable Seamless Integration:</strong> We're developing frameworks that make sophisticated AI
+                    capabilities accessible to professionals and consumers alike through our agent-as-a-service
+                    offerings.</li>
             </ul>
-            <p class="text-base md:text-lg text-gray-300 leading-relaxed mt-6">
-                We strive to empower organizations to build and deploy sophisticated AI systems responsibly and
-                efficiently, driving innovation while maintaining control over complexity and cost.
+            <p class="text-sm md:text-base text-gray-300 leading-relaxed mt-6">
+                Through our AMLO framework's evolutionary simulation capabilities and agentic automation extensions,
+                we're building toward a future where AI systems are not just tools but partners in solving complex
+                challenges across industries and applications. Our ultimate goal is to make powerful AI capabilities
+                accessible to everyone - from enterprise clients to individual professionals to the general population.
             </p>
-            <p class="text-sm text-gray-500 mt-4">
-                Brendan [Last Name Placeholder] <br>
+            <p class="text-xs md:text-sm text-gray-500 mt-4"> Brendon Reperttang <br>
                 Founder, Niru ML
             </p>
         </section>
@@ -182,14 +245,14 @@
 
     <footer class="w-full max-w-4xl text-center text-xs text-gray-400 mt-16 mb-8">
         <div class="mb-4">
-            <a href="mailto:placeholder@niru.ml" class="hover:text-white mx-2">Email: placeholder@niru.ml</a> |
-            <a href="https://linkedin.com/in/placeholder-founder" target="_blank" rel="noopener noreferrer"
+            <a href="mailto:brendonrt@niru.ml" class="hover:text-white mx-2">Email: brendonrt@niru.ml</a> |
+            <a href="https://www.linkedin.com/in/brendon-rt/" target="_blank" rel="noopener noreferrer"
                 class="hover:text-white mx-2">Founder Linkedin</a> |
-            <a href="https://linkedin.com/company/placeholder-niru" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.linkedin.com/company/niru-ml/" target="_blank" rel="noopener noreferrer"
                 class="hover:text-white mx-2">Company Linkedin</a>
         </div>
         <div>
-            <a href="https://linkedin.com/company/placeholder-niru" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.linkedin.com/company/niru-ml/" target="_blank" rel="noopener noreferrer"
                 class="social-icon">in</a>
         </div>
         <p class="mt-4">&copy; 2025 Niru ML. All rights reserved.</p>
